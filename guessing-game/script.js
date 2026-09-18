@@ -20,7 +20,7 @@ button.addEventListener("click", () => {
 
     } else if (valor < numeroAleatorio) {
         saida.innerHTML = "Você errou, o número secreto é maior."
-        saida.style.color = "orange";
+        saida.style.color = "rgb(207, 100, 0)";
 
     } else {
         saida.innerHTML = "Você errou, o número secreto é menor."

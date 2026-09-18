@@ -5,20 +5,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Jogo de advinhação</h1>
-        <p>escolha um número de 1 a 10 e tente acertar</p>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Jogo de advinhação</h1>
+            <p>escolha um número de 1 a 10 e tente acertar</p>
+        </header>
 
-    <main>
-        <input type="text" id="input">
-        <button type="submit" id="button">Enviar</button>
-        <button type="submit" id="reset">Resetar</button>
-        <p id="saida"></p>
-    </main>
+        <main>
+            <div>
+                <input type="text" id="input" placeholder="ex: 7">
+                <button type="submit" id="button" class="button">Enviar</button>
+                <button type="submit" id="reset" class="button">Resetar</button>
+            </div>
+
+            <div class="text">
+                <p id="saida"></p>
+            </div>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>
