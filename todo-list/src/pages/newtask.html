@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Task</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/newtask.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="newtask.html">NewTask</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </header>
+
+        <main>
+            <form id="taskForm">
+                <label for="titleInput">Título:</label>
+                <input type="text" id="titleInput" placeholder="ex: jogar bola">
+
+                <label for="description">Descrição:</label>
+                <input type="text" id="description" placeholder="ex: levar camisa de time">
+
+                <button type="submit">Enviar</button>
+
+                <div class="exit-msg">
+                    <p id="msg"></p>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="../js/newtask.js"></script>
+
+</body>
+
+</html>
