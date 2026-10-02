@@ -1,0 +1,62 @@
+#div {
+  width: 100%;
+  height: auto;
+  display: grid;
+  /* Cria colunas automaticamente, com no mínimo 200px, ocupando o espaço disponível */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  place-items: center;
+  padding: 5px;
+  gap: 10px;
+}
+
+.card {
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgb(189, 189, 189);
+  width: 200px;
+  height: auto;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+}
+
+.description {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+}
+
+.flexButtons {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+}
+
+.delet,
+.edit {
+  background-color: rgb(255, 0, 0);
+  width: 90%;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 7px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.edit {
+  background-color: rgb(13, 192, 13);
+}
+
+.delet:hover {
+  background-color: rgb(179, 0, 0);
+}
+
+.edit:hover {
+  background-color: rgb(14, 143, 14);
+}

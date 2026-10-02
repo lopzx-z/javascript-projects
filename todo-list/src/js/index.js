@@ -9,12 +9,14 @@ function viewTasks() {
     // Cria um card com os dados da tarefa
     div.innerHTML += `
         <div class="card">
-            <p class="title">title: ${tasks[i].title}</p>
+            <p class="title">${tasks[i].title}</p>
             <p class="description">description: ${tasks[i].description}</p>
 
             <!-- ID da tarefa fica no value dos botões -->
-            <button class="delet" value="${tasks[i].id}">Delete</button>
-            <button class="edit" value="${tasks[i].id}">Edit</button>
+            <div class="flexButtons">
+              <button class="delet" value="${tasks[i].id}">Delete</button>
+              <button class="edit" value="${tasks[i].id}">Edit</button>
+            </div>
         </div>`;
   }
 }
