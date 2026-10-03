@@ -1,16 +1,16 @@
 function viewTasks() {
-  const div = document.getElementById("div");
-
   // Pega as tarefas salvas
   const tasks = JSON.parse(localStorage.getItem("task")) || [];
+
+  const view = document.getElementById("view");
 
   // Passa por cada tarefa
   for (let i = 0; i < tasks.length; i++) {
     // Cria um card com os dados da tarefa
-    div.innerHTML += `
+    view.innerHTML += `
         <div class="card">
             <p class="title">${tasks[i].title}</p>
-            <p class="description">description: ${tasks[i].description}</p>
+            <p class="description">Descrição: ${tasks[i].description}</p>
 
             <!-- ID da tarefa fica no value dos botões -->
             <div class="flexButtons">
@@ -47,5 +47,49 @@ function deleteTasks() {
   }
 }
 
+// ALERTA : REVISAR CÓDIGO E RECRIAR LÓGICA DA FUNÇÃO ABAIXO
+function editTasks() {
+  const edit = document.getElementById("edit");
+  const view = document.getElementById("view");
+
+  // Pega todos os botões de edit
+  const buttons = document.getElementsByClassName("edit");
+
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", (event) => {
+      let task = JSON.parse(localStorage.getItem("task"));
+
+      view.style.display = "none";
+
+      edit.innerHTML = `
+        <label>Novo titulo:</label>
+        <input type="text" id="title">
+
+        <label>Nova descrição:</label>
+        <input type="text" id="description">
+
+        <button type="submit" id="button">Enviar</button>
+        `;
+
+      const button = document.getElementById("button");
+
+      button.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const title = document.getElementById("title").value;
+        const description = document.getElementById("description").value;
+
+        task[i].title = title;
+        task[i].description = description;
+
+        localStorage.setItem("task", JSON.stringify(task));
+
+        location.reload();
+      });
+    });
+  }
+}
+
 viewTasks();
 deleteTasks();
+editTasks();
