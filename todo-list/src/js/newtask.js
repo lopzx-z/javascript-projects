@@ -45,7 +45,7 @@ function newTask() {
 
 }
 
-form.addEventListener("click", (event) => {
+form.addEventListener("submit", (event) => {
     // Garante que a página não vai atualizar
     event.preventDefault();
     newTask()

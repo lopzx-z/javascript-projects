@@ -1,7 +1,7 @@
 const div = document.getElementById("div");
 
 div.innerHTML = `
-<button id="dark"">Dark</button>
+<button id="dark">Dark</button>
 `;
 
 div.addEventListener("click", (event) => {

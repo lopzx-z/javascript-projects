@@ -47,7 +47,6 @@ function deleteTasks() {
   }
 }
 
-// ALERTA : REVISAR CÓDIGO E RECRIAR LÓGICA DA FUNÇÃO ABAIXO
 function editTasks() {
   const edit = document.getElementById("edit");
   const view = document.getElementById("view");
@@ -62,13 +61,16 @@ function editTasks() {
       view.style.display = "none";
 
       edit.innerHTML = `
-        <label>Novo titulo:</label>
-        <input type="text" id="title">
+      <div class="editArea">
+      
+        <label>Novo Título:</label>
+        <input type="text" id="title" class="inputEdit" placeholder="ex: jogar bola">
 
-        <label>Nova descrição:</label>
-        <input type="text" id="description">
+        <label>Nova Descrição:</label>
+        <input type="text" id="description" class="inputEdit" placeholder="ex: levar camisa de time">
 
-        <button type="submit" id="button">Enviar</button>
+          <button type="submit" id="button">Editar</button>
+      </div>
         `;
 
       const button = document.getElementById("button");
